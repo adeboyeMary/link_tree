@@ -1,0 +1,23 @@
+
+.form p{
+    font-weight: bold;
+    text-align: center;
+}
+
+.form input{
+    width: 84%;
+    padding: 17px;
+    border-radius: 20px;
+    border: 1px solid white;
+    margin-left: 6%;
+}
+
+@media only screen and (max-width: 600px) {
+    .form input {
+        width: 74%;
+        padding: 17px;
+        border-radius: 20px;
+        border: 1px solid white;
+        margin: 0% 0% 1% 10%;
+      }
+}

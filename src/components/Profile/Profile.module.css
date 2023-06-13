@@ -1,0 +1,16 @@
+.profContainer {
+    text-align: center;
+    background: pink;
+    /* margin-left: 20%; */
+}
+
+.profContainer img {
+    height: 190px;
+    width: 176px;
+    border-radius: 54%;
+    margin-top: 4%;
+}
+
+.profContainer p {
+    font-weight: bold;
+}
