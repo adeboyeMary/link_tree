@@ -4,7 +4,7 @@ import styles from './Profile.module.css';
 import me from './img.jpg';
 // import me from './components/img.jpg';
 
-const Profile = () => {
+const Profile = (props) => {
     return (
         <div className={styles.profContainer}>
             <div><img src={me} alt="Me! "/></div>

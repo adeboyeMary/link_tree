@@ -5,7 +5,7 @@ import Button from '../UI/Button';
 import Confirmation from './Confirmation';
 import styles from './Form.module.css';
 
-const Form = () => {
+const Form = (props) => {
     const [enteredEmail, setEnteredEmail] = useState('');
     const [confirm, setConfirm] = useState('');
     // const [error, setError] = useState('');
@@ -19,7 +19,6 @@ const Form = () => {
         event.preventDefault();
 
         const confirmMessage= enteredEmail ? 'Thank you!' : '';
-
         setConfirm(confirmMessage);
 
         const myData = { email: enteredEmail };
@@ -32,7 +31,7 @@ const Form = () => {
             <Hr />
             <form className={styles.form} onSubmit={submitHandler}>
                 <p>Subscribe for updates</p>
-                <input 
+                <input type='email'
                     placeholder='Enter your email'
                     onChange={emailChangeHandler}
                     value={enteredEmail} 
