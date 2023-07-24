@@ -2,10 +2,10 @@
 	background-color: black;
 	color: white;
 	width: 96%;
-	padding: 17px;
+	padding: 22px;
 	border-radius: 20px;
 	border: 1px solid black;
-	margin: 1% 2% 0% 2%;
+	margin: 0% 2% 1% 2%;
 }
 
 .button:hover{

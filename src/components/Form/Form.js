@@ -7,21 +7,29 @@ import styles from './Form.module.css';
 
 const Form = (props) => {
     const [enteredEmail, setEnteredEmail] = useState('');
-    
+    const [error, setError] = useState(false);
+    const [formWasTouched, setFormWasTouched] = useState(false);    
 
     const emailChangeHandler = (event) => {
         setEnteredEmail(event.target.value);
-        // console.log('working!!!');
     }
 
     const submitHandler = (event) => {
         event.preventDefault();
 
-        
+        setFormWasTouched(true);
+
+        if(enteredEmail.trim() === ""){
+            setError(false);
+            return;
+        }
+        setError(true);
+
         const myData = { email: enteredEmail };
         console.log(myData);
         setEnteredEmail('');
     }
+    const errorMessage = !error && formWasTouched;
     return (
         <>
             <Hr />
@@ -34,7 +42,8 @@ const Form = (props) => {
                 />
 
                 <Button type="submit">Subscribe</Button>
-                {/* {message && <p>Thank you for subscribing!</p>} */}
+                {errorMessage && <p className={styles['err-text']}>Email cannot be empty</p>}
+                {error && <p>Thank you for subscribing!</p>}
             </form>
             
             {/* <Confirmation confirm={confirm}/> */}

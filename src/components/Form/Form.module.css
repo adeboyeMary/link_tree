@@ -6,10 +6,13 @@
 
 .form input{
     width: 85%;
-    margin-left: 6%;
+    margin: 0% 0% 1% 6%;
     padding: 17px;
     border-radius: 20px;
     border: 1px solid white;
+}
+.err-text{
+    color: red;
 }
 
 @media only screen and (max-width: 600px) {
