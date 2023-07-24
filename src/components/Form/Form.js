@@ -45,8 +45,6 @@ const Form = (props) => {
                 {errorMessage && <p className={styles['err-text']}>Email cannot be empty</p>}
                 {error && <p>Thank you for subscribing!</p>}
             </form>
-            
-            {/* <Confirmation confirm={confirm}/> */}
         </>
     )
 }
