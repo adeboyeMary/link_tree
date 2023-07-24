@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 
 import Hr from '../UI/Hr';
 import Button from '../UI/Button';
-// import Confirmation from './Confirmation';
 import styles from './Form.module.css';
 
-const Form = (props) => {
+const Form = () => {
     const [enteredEmail, setEnteredEmail] = useState('');
     const [error, setError] = useState(false);
     const [formWasTouched, setFormWasTouched] = useState(false);    
