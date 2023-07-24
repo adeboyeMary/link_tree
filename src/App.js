@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import Profile from './components/Profile/Profile.js';
+import './App.css';
 import Links from './components/Links/Links.js';
 import Form from './components/Form/Form.js';
 // import styles from './App.module.css';
@@ -9,9 +10,17 @@ import Form from './components/Form/Form.js';
 const App =() => {
   return (
     <React.Fragment>
-      <Profile />
-      <Links />
-      <Form />
+      <header>
+        <Profile />
+      </header>
+
+      <main>
+        <Links />
+      </main>
+
+      <footer>
+        <Form />
+      </footer>
     </React.Fragment>
   );
 }

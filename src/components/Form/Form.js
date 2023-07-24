@@ -2,13 +2,12 @@ import React, { useState } from 'react';
 
 import Hr from '../UI/Hr';
 import Button from '../UI/Button';
-import Confirmation from './Confirmation';
+// import Confirmation from './Confirmation';
 import styles from './Form.module.css';
 
 const Form = (props) => {
     const [enteredEmail, setEnteredEmail] = useState('');
-    const [confirm, setConfirm] = useState('');
-    // const [error, setError] = useState('');
+    
 
     const emailChangeHandler = (event) => {
         setEnteredEmail(event.target.value);
@@ -18,14 +17,11 @@ const Form = (props) => {
     const submitHandler = (event) => {
         event.preventDefault();
 
-        const confirmMessage= enteredEmail ? 'Thank you!' : '';
-        setConfirm(confirmMessage);
-
+        
         const myData = { email: enteredEmail };
         console.log(myData);
         setEnteredEmail('');
     }
-
     return (
         <>
             <Hr />
@@ -38,9 +34,10 @@ const Form = (props) => {
                 />
 
                 <Button type="submit">Subscribe</Button>
+                {/* {message && <p>Thank you for subscribing!</p>} */}
             </form>
             
-            <Confirmation confirm={confirm}/>
+            {/* <Confirmation confirm={confirm}/> */}
         </>
     )
 }

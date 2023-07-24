@@ -4,7 +4,7 @@ import Button from '../UI/Button';
 
 const Links = () => {
     return (
-        <>
+        <React.Fragment>
             <a href="https://youtube.com/@maryadeboye5069">
                 <Button>Support me</Button>
             </a>
@@ -16,7 +16,7 @@ const Links = () => {
             <a href="https://wa.me/+2347067313558">
                 <Button><i className=""></i>Whatsapp</Button>
             </a>
-        </>
+        </React.Fragment>
     )
 }
 
